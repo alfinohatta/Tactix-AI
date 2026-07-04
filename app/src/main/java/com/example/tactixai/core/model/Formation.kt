@@ -1,0 +1,62 @@
+package com.example.tactixai.core.model
+
+/**
+ * Model data untuk formasi AI platform.
+ * Mencakup 100 tipe formasi dari berbagai doktrin perang.
+ */
+data class Formation(
+    val id: Long,
+    val name: String,
+    val type: FormationType,
+    val purpose: FormationPurpose,
+    val parameters: Map<String, Any> = emptyMap()
+)
+
+enum class FormationType {
+    // A. OFFENSIVE (1-10)
+    SPEARHEAD, WEDGE, FLYING_V, DIAMOND, TRIANGLE_ASSAULT, NEEDLE, HAMMER, AXE, BLADE, ARROW_RAIN,
+
+    // B. ANCIENT CHINA ADAPTATION (11-20)
+    FANG_ZHEN, YU_LIN, YAN_ZHEN, HE_ZHEN, CHANG_SHE, BA_GUA, YUAN_ZHEN, YUE_ZHEN, LONG_ZHEN, TIAN_DI_REN,
+
+    // C. DRONE SWARM (21-30)
+    SWARM_CLOUD, CLUSTER, BEE_SWARM, FALCON_DIVE, EAGLE, OWL, BAT, MOSQUITO, VORTEX, SPIRAL,
+
+    // D. DEFENSIVE (31-40)
+    SHIELD_WALL, TURTLE, FORTRESS_RING, LAYER_DEFENSE, BUBBLE_DEFENSE, GRID_DEFENSE, MESH_DEFENSE, STAR_DEFENSE, BASTION, ANCHOR,
+
+    // E. SUBMARINE / SEA (41-50)
+    WOLF_PACK, DEEP_CIRCLE, SILENT_NET, ABYSS_LINE, TRIDENT, SHARK, WHALE, CORAL, TORPEDO_SPEAR, OCEAN_RING,
+
+    // F. GROUND ROBOT (51-60)
+    TANK_COLUMN, CONVOY, URBAN_GRID, FOREST_LINE, MOUNTAIN_V, CRAWLER, SPIDER, CRAB, ANT_COLONY, PACK,
+
+    // G. STEALTH / INTELLIGENCE (61-70)
+    GHOST, SHADOW, MIRROR, DECOY, PHANTOM_SWARM, INVISIBLE_RING, SILENT_ARROW, AMBUSH, TRAP, BAIT,
+
+    // H. FUTURISTIC AI (71-80)
+    NEURAL_SWARM, ADAPTIVE, SELF_HEALING, QUANTUM_GRID, HIVE_MIND, FRACTAL, LIQUID, DYNAMIC_MESH, AUTONOMOUS_RING, EVOLUTION,
+
+    // I. LARGE COMBINATION (81-90)
+    AIR_LAND_SEA, THREE_ARMY_SPEAR, SKY_SHIELD, OCEAN_WALL, LAND_HAMMER, SKY_ANVIL, MULTI_LAYER_SWARM, DRAGON_NETWORK, PHOENIX, TITAN,
+
+    // J. EXPERIMENTAL (91-100)
+    TIME_DELAY, WAVE, TSUNAMI, METEOR, STAR_CLUSTER, GALAXY, ORBIT_EXP, GRAVITY_WELL, BLACK_HOLE, OMEGA,
+
+    // Aliases & Missing Types from build errors
+    PINCER, AERIAL_SPEAR, SKY_WALL, ARMORED_SPEAR, MOBILE_FORTRESS, ORBIT, RING, CUSTOM
+}
+
+enum class FormationPurpose {
+    ATTACK, DEFENSE, RECON, ESCORT, CONTROL, STEALTH, EXPERIMENTAL
+}
+
+data class FormationMember(
+    val formationId: Long,
+    val agentId: Long,
+    val positionOrder: Int,
+    val relativeX: Float,
+    val relativeY: Float,
+    val relativeZ: Float,
+    val roleInFormation: String
+)
