@@ -140,7 +140,7 @@ TactixAI/
 *   **Hardware:** Android 15 (API 35/37) device or emulator with x86_64 acceleration.
 
 ### Installation & Run
-1.  **Clone:** `git clone https://github.com/your-org/tactix-ai.git`
+1.  **Clone:** `git clone https://github.com/alfinohatta/Tactix-AI.git`
 2.  **Environment:** Copy `.env.example` to `.env`.
 3.  **Build:** Run `./gradlew assembleDebug` in the terminal.
 4.  **Deploy:** Click 'Run' in Android Studio to deploy to your simulator.
