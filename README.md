@@ -3,7 +3,6 @@
 ![Platform](https://img.shields.io/badge/platform-Android%2015-brightgreen)
 ![Build](https://img.shields.io/badge/build-passing-success)
 ![Kotlin](https://img.shields.io/badge/kotlin-2.2.10-blue)
-![License](https://img.shields.io/badge/license-MIT-orange)
 
 Tactix AI is an **AI-native Simulation Operating System** designed for high-scale, autonomous multi-agent environments. Engineered to orchestrate **10,000+ intelligent agents** on mobile hardware, it utilizes Data-Oriented Design (DOD) and Tiered Strategic AI to bridge the gap between complex R&D simulations and real-time edge performance.
 
